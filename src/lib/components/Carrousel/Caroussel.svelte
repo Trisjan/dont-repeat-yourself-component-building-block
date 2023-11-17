@@ -1,6 +1,5 @@
 <script>
     export let data
-    console.log(data)
 </script>
 
 <section class="component">
@@ -30,10 +29,10 @@
         {#each data.uitleengeschiedenis1 as book}
             <article>
                 <img src="{book.image.url}" alt="foto van {book.title}" loading="lazy">
-                <section class="info">
+                <section class="info" aria-label="information about the book">
                     <p class="p__title">{book.title}</p>
                     <p>{book.author}</p>
-                    <section class="s__date">
+                    <section class="s__date" aria-label="important dates">
                         <section>
                             <p class="p__title">Uitleendatum:</p>
                             <p>{book.uitleendatum}</p>
@@ -124,6 +123,10 @@
         font-size: 0.8rem;
         }
 
+        article {
+            width: 10rem;
+        }
+
         .s__date section > p {
         font-size: 0.7rem;
         }
@@ -136,6 +139,7 @@
 
         article {
             scroll-snap-align: center;
+            width: 9rem;
         }
 
         .s__date {
