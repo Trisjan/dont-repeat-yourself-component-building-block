@@ -3,7 +3,13 @@
     export let data;
 </script>
 
-<h1>Welcome to SvelteKit</h1>
-<p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
+<Caroussel {data} />
 
-<Caroussel {data}/>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+    :root {
+        background-color: #E4E9F7;
+        font-family: 'Poppins', sans-serif;
+    }
+</style>

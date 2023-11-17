@@ -5,15 +5,13 @@ export async function load() {
     let query = gql`
     query uitleengeschiedenis {
         uitleengeschiedenis1 {
-        author
-        category
-        id
-        image {
-            url
-        }
-        title
-        inleverdatum
-        uitleendatum
+            title
+            author
+            image {
+                url
+            }
+            uitleendatum
+            inleverdatum
         }
     }
 `
